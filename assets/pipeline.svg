@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 110" width="100%" height="110" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="pipe-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0d1527"/>
+      <stop offset="100%" stop-color="#070b14"/>
+    </linearGradient>
+
+    <!-- Border Gradient -->
+    <linearGradient id="pipe-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#1e293b" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <!-- Traveling Laser Beam Gradient -->
+    <linearGradient id="laser-stream" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset="60%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>
+    </linearGradient>
+
+    <!-- Shimmer Highlight Gradient -->
+    <linearGradient id="pipe-shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0">
+        <animate attributeName="x1" values="-100%;200%" dur="3.5s" repeatCount="indefinite" />
+        <animate attributeName="x2" values="0%;300%" dur="3.5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.85">
+        <animate attributeName="x1" values="-100%;200%" dur="3.5s" repeatCount="indefinite" />
+        <animate attributeName="x2" values="0%;300%" dur="3.5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0">
+        <animate attributeName="x1" values="-100%;200%" dur="3.5s" repeatCount="indefinite" />
+        <animate attributeName="x2" values="0%;300%" dur="3.5s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <style>
+      .node-text {
+        font-family: ui-monospace, SFMono-Regular, 'JetBrains Mono', Menlo, Consolas, monospace;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+      }
+      .node-sub {
+        font-family: ui-monospace, SFMono-Regular, 'JetBrains Mono', Menlo, Consolas, monospace;
+        font-size: 9.5px;
+        font-weight: 500;
+        fill: #64748b;
+        letter-spacing: 0.5px;
+      }
+    </style>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="2" y="2" width="846" height="106" rx="12" fill="url(#pipe-bg)" stroke="url(#pipe-border)" stroke-width="1.5"/>
+
+  <!-- Animated Top Border Shimmer Beam -->
+  <rect x="16" y="2" width="818" height="2" fill="url(#pipe-shimmer)"/>
+
+  <!-- Subtle Blueprint Tech Grid Background -->
+  <g opacity="0.05" stroke="#38bdf8" stroke-width="0.75">
+    <line x1="100" y1="0" x2="100" y2="110" />
+    <line x1="250" y1="0" x2="250" y2="110" />
+    <line x1="400" y1="0" x2="400" y2="110" />
+    <line x1="550" y1="0" x2="550" y2="110" />
+    <line x1="700" y1="0" x2="700" y2="110" />
+    <line x1="0" y1="35" x2="850" y2="35" />
+    <line x1="0" y1="75" x2="850" y2="75" />
+  </g>
+
+  <!-- Base Pipeline Track (Dark connecting branch line) -->
+  <line x1="105" y1="52" x2="745" y2="52" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+  <line x1="105" y1="52" x2="745" y2="52" stroke="#334155" stroke-width="1" stroke-dasharray="4 6" stroke-linecap="round"/>
+
+  <!-- Continuous Laser Stream Animation (Flowing Left -> Right) -->
+  <path d="M 105 52 L 745 52" stroke="url(#laser-stream)" stroke-width="3" stroke-dasharray="140 500" stroke-linecap="round">
+    <animate attributeName="stroke-dashoffset" values="640; 0" dur="2.6s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Leading Glowing Photon Packet -->
+  <circle r="4" fill="#ffffff">
+    <animate attributeName="cx" values="105; 745" dur="2.6s" repeatCount="indefinite" />
+    <animate attributeName="cy" values="52; 52" dur="2.6s" repeatCount="indefinite" />
+  </circle>
+  <circle r="8" fill="#38bdf8" opacity="0.5">
+    <animate attributeName="cx" values="105; 745" dur="2.6s" repeatCount="indefinite" />
+    <animate attributeName="cy" values="52; 52" dur="2.6s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.7; 0.3; 0.7" dur="2.6s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- ==================== LEFT NODE: LOCAL CODE ==================== -->
+  <g transform="translate(75, 52)">
+    <!-- Node Outer Ring -->
+    <circle cx="0" cy="0" r="22" fill="#0b1329" stroke="#1e3a8a" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="16" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+    <!-- Code Icon < / > -->
+    <text x="0" y="4" font-family="ui-monospace, SFMono-Regular, monospace" font-size="12px" font-weight="700" fill="#38bdf8" text-anchor="middle">&lt;/&gt;</text>
+    <!-- Label -->
+    <text x="0" y="32" class="node-text" fill="#f8fafc" text-anchor="middle">CODE</text>
+    <text x="0" y="43" class="node-sub" text-anchor="middle">local: workspace</text>
+  </g>
+
+  <!-- ==================== STAGE 1: COMMIT ==================== -->
+  <g transform="translate(290, 52)">
+    <circle cx="0" cy="0" r="8" fill="#0b1329" stroke="#38bdf8" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="3.5" fill="#38bdf8"/>
+    <text x="0" y="-14" class="node-text" fill="#93c5fd" text-anchor="middle">git commit</text>
+    <text x="0" y="24" class="node-sub" text-anchor="middle">staged</text>
+  </g>
+
+  <!-- ==================== STAGE 2: BUILD / VERIFY ==================== -->
+  <g transform="translate(520, 52)">
+    <circle cx="0" cy="0" r="8" fill="#0b1329" stroke="#38bdf8" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="3.5" fill="#ffffff"/>
+    <text x="0" y="-14" class="node-text" fill="#93c5fd" text-anchor="middle">build &amp; test</text>
+    <text x="0" y="24" class="node-sub" text-anchor="middle">passing</text>
+  </g>
+
+  <!-- ==================== RIGHT NODE: GITHUB ==================== -->
+  <g transform="translate(775, 52)">
+    <!-- Ripple Ping Wave on Arrival -->
+    <circle cx="0" cy="0" r="22" stroke="#38bdf8" stroke-width="1.5" fill="none">
+      <animate attributeName="r" values="22; 34" dur="2.6s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8; 0" dur="2.6s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Node Body -->
+    <circle cx="0" cy="0" r="22" fill="#0b1329" stroke="#2563eb" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="16" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+
+    <!-- Octocat GitHub Icon -->
+    <path transform="translate(-8.5, -8.5) scale(1.05)" fill="#ffffff" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+
+    <!-- Label -->
+    <text x="0" y="32" class="node-text" fill="#38bdf8" text-anchor="middle">GITHUB</text>
+    <text x="0" y="43" class="node-sub" text-anchor="middle">origin/main</text>
+  </g>
+</svg>
