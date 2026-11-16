@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 24" width="100%" height="24" fill="none">
+  <defs>
+    <!-- Divider Gradient -->
+    <linearGradient id="div-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#1e3a8a" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="75%" stop-color="#1e3a8a" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Pulse for Center Node -->
+    <style>
+      @keyframes pulseNode {
+        0%, 100% { transform: scale(1); opacity: 0.8; }
+        50% { transform: scale(1.3); opacity: 1; }
+      }
+      .node-pulse {
+        transform-origin: 425px 12px;
+        animation: pulseNode 3s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Glowing Line -->
+  <line x1="40" y1="12" x2="810" y2="12" stroke="url(#div-grad)" stroke-width="1.5"/>
+
+  <!-- Center Glowing Diamond -->
+  <g class="node-pulse">
+    <rect x="420" y="7" width="10" height="10" rx="2" transform="rotate(45 425 12)" fill="#0b1329" stroke="#38bdf8" stroke-width="1.5"/>
+    <circle cx="425" cy="12" r="2" fill="#ffffff"/>
+  </g>
+</svg>

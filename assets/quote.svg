@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 56" width="100%" height="56" fill="none">
+  <defs>
+    <linearGradient id="quote-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1329"/>
+      <stop offset="50%" stop-color="#0f1a36"/>
+      <stop offset="100%" stop-color="#080e1e"/>
+    </linearGradient>
+
+    <linearGradient id="quote-border" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#1e3a8a" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <style>
+      .quote-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 13.5px;
+        font-style: italic;
+        fill: #e2e8f0;
+        letter-spacing: 0.3px;
+      }
+      .author-text {
+        font-family: ui-monospace, SFMono-Regular, 'JetBrains Mono', Menlo, Consolas, monospace;
+        font-size: 11.5px;
+        font-weight: 600;
+        fill: #38bdf8;
+        letter-spacing: 0.8px;
+      }
+      .quote-mark {
+        font-family: Georgia, serif;
+        font-size: 24px;
+        fill: #38bdf8;
+        opacity: 0.5;
+      }
+    </style>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="2" y="2" width="846" height="52" rx="10" fill="url(#quote-bg)" stroke="url(#quote-border)" stroke-width="1.2"/>
+
+  <!-- Content Centered -->
+  <g transform="translate(425, 33)" text-anchor="middle">
+    <text x="-215" y="-3" class="quote-mark">“</text>
+    <text x="0" y="0" class="quote-text">
+      Simplicity is prerequisite for reliability.
+    </text>
+    <text x="180" y="5" class="quote-mark">”</text>
+    <text x="0" y="16" class="author-text">— EDSGER W. DIJKSTRA</text>
+  </g>
+</svg>
