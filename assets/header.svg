@@ -1,158 +1,373 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 180" width="100%" height="180" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 220" width="100%" height="220" fill="none">
   <defs>
     <!-- Background Gradient -->
-    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0f1d"/>
-      <stop offset="50%" stop-color="#0d1527"/>
-      <stop offset="100%" stop-color="#070b14"/>
+    <linearGradient id="bg-cyber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="40%" stop-color="#09122c"/>
+      <stop offset="75%" stop-color="#060c1e"/>
+      <stop offset="100%" stop-color="#020409"/>
     </linearGradient>
 
-    <!-- Border Linear Gradient -->
-    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5"/>
-      <stop offset="40%" stop-color="#1e293b" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#2563eb" stop-opacity="0.4"/>
+    <!-- Name Gradient -->
+    <linearGradient id="name-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#e0f2fe"/>
+      <stop offset="70%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
     </linearGradient>
 
-    <!-- Shimmer Highlight Gradient -->
-    <linearGradient id="shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Border Neon Gradient -->
+    <linearGradient id="border-neon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="25%" stop-color="#1e3a8a" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#2563eb" stop-opacity="0.7"/>
+      <stop offset="75%" stop-color="#1e3a8a" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <!-- Shimmer Top Beam -->
+    <linearGradient id="shimmer-laser" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8" stop-opacity="0">
-        <animate attributeName="x1" values="-100%;200%" dur="3.5s" repeatCount="indefinite" />
-        <animate attributeName="x2" values="0%;300%" dur="3.5s" repeatCount="indefinite" />
+        <animate attributeName="x1" values="-100%;200%" dur="3.2s" repeatCount="indefinite" />
+        <animate attributeName="x2" values="0%;300%" dur="3.2s" repeatCount="indefinite" />
       </stop>
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.85">
-        <animate attributeName="x1" values="-100%;200%" dur="3.5s" repeatCount="indefinite" />
-        <animate attributeName="x2" values="0%;300%" dur="3.5s" repeatCount="indefinite" />
+      <stop offset="45%" stop-color="#38bdf8" stop-opacity="0.2">
+        <animate attributeName="x1" values="-100%;200%" dur="3.2s" repeatCount="indefinite" />
+        <animate attributeName="x2" values="0%;300%" dur="3.2s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="1">
+        <animate attributeName="x1" values="-100%;200%" dur="3.2s" repeatCount="indefinite" />
+        <animate attributeName="x2" values="0%;300%" dur="3.2s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.2">
+        <animate attributeName="x1" values="-100%;200%" dur="3.2s" repeatCount="indefinite" />
+        <animate attributeName="x2" values="0%;300%" dur="3.2s" repeatCount="indefinite" />
       </stop>
       <stop offset="100%" stop-color="#38bdf8" stop-opacity="0">
-        <animate attributeName="x1" values="-100%;200%" dur="3.5s" repeatCount="indefinite" />
-        <animate attributeName="x2" values="0%;300%" dur="3.5s" repeatCount="indefinite" />
+        <animate attributeName="x1" values="-100%;200%" dur="3.2s" repeatCount="indefinite" />
+        <animate attributeName="x2" values="0%;300%" dur="3.2s" repeatCount="indefinite" />
       </stop>
+    </linearGradient>
+
+    <!-- Equalizer Gradient -->
+    <linearGradient id="eq-grad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="60%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#a5f3fc"/>
+    </linearGradient>
+
+    <!-- Chip Background -->
+    <linearGradient id="chip-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0b1739" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#081026" stop-opacity="0.9"/>
     </linearGradient>
 
     <!-- Ambient Glow Circles -->
-    <radialGradient id="ambient-cyan" cx="80%" cy="30%" r="60%">
-      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.22"/>
+    <radialGradient id="glow-ambient-cyan" cx="740" cy="120" r="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.28"/>
       <stop offset="100%" stop-color="#0284c7" stop-opacity="0"/>
     </radialGradient>
 
-    <radialGradient id="ambient-blue" cx="20%" cy="80%" r="60%">
-      <stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.18"/>
+    <radialGradient id="glow-ambient-blue" cx="120" cy="140" r="140" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.22"/>
       <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0"/>
     </radialGradient>
 
-    <style>
-      .mono-tag {
-        font-family: ui-monospace, SFMono-Regular, 'JetBrains Mono', Menlo, Consolas, monospace;
-        font-size: 13px;
-        font-weight: 500;
-        fill: #38bdf8;
-        letter-spacing: 1px;
-      }
-      .title {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        font-size: 38px;
-        font-weight: 800;
-        fill: #ffffff;
-        letter-spacing: -0.5px;
-      }
-      .subtitle {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        font-size: 17px;
-        font-weight: 500;
-        fill: #93c5fd;
-      }
+    <radialGradient id="glow-ambient-violet" cx="440" cy="190" r="160" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
 
-      /* Animations */
-      @keyframes blinkCursor {
+    <!-- Cyber Grid Pattern -->
+    <pattern id="cyber-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.45"/>
+      <circle cx="0" cy="0" r="0.8" fill="#38bdf8" fill-opacity="0.35"/>
+    </pattern>
+
+    <!-- Hatch Pattern for Accents -->
+    <pattern id="hatch-pattern" width="8" height="8" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.15"/>
+    </pattern>
+
+    <style>
+      .mono {
+        font-family: ui-monospace, SFMono-Regular, 'JetBrains Mono', Menlo, Consolas, monospace;
+      }
+      .sans {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      }
+      @keyframes blink {
         0%, 49% { opacity: 1; }
         50%, 100% { opacity: 0; }
       }
-      @keyframes statusPulse {
-        0% { r: 4px; opacity: 1; }
-        50% { r: 7.5px; opacity: 0.25; }
-        100% { r: 4px; opacity: 1; }
-      }
-
       .cursor {
-        animation: blinkCursor 1s infinite;
-      }
-      .status-ping {
-        animation: statusPulse 2s ease-in-out infinite;
+        animation: blink 1s infinite;
       }
     </style>
   </defs>
 
-  <!-- Container Box -->
-  <rect x="2" y="2" width="846" height="176" rx="14" fill="url(#bg-grad)" stroke="url(#border-grad)" stroke-width="1.5"/>
+  <!-- ==================== BACKGROUND & AMBIENT ==================== -->
+  <!-- Chamfered Chassis Base -->
+  <path d="M 16 2 L 834 2 L 848 16 L 848 204 L 834 218 L 16 218 L 2 204 L 2 16 Z" fill="url(#bg-cyber)" stroke="url(#border-neon)" stroke-width="1.5"/>
 
-  <!-- Ambient Light Fields -->
-  <circle cx="720" cy="50" r="160" fill="url(#ambient-cyan)"/>
-  <circle cx="140" cy="140" r="140" fill="url(#ambient-blue)"/>
+  <!-- Ambient Light Orbs -->
+  <circle cx="740" cy="120" r="150" fill="url(#glow-ambient-cyan)"/>
+  <circle cx="120" cy="140" r="140" fill="url(#glow-ambient-blue)"/>
+  <circle cx="440" cy="190" r="160" fill="url(#glow-ambient-violet)"/>
 
-  <!-- Subtle Blueprint Tech Grid Background -->
-  <g opacity="0.07" stroke="#38bdf8" stroke-width="0.75">
-    <line x1="50" y1="0" x2="50" y2="180" />
-    <line x1="150" y1="0" x2="150" y2="180" />
-    <line x1="250" y1="0" x2="250" y2="180" />
-    <line x1="350" y1="0" x2="350" y2="180" />
-    <line x1="450" y1="0" x2="450" y2="180" />
-    <line x1="550" y1="0" x2="550" y2="180" />
-    <line x1="650" y1="0" x2="650" y2="180" />
-    <line x1="750" y1="0" x2="750" y2="180" />
+  <!-- Background Blueprint Dot-Grid -->
+  <rect x="6" y="6" width="838" height="208" fill="url(#cyber-grid)" opacity="0.85"/>
 
-    <line x1="0" y1="45" x2="850" y2="45" />
-    <line x1="0" y1="90" x2="850" y2="90" />
-    <line x1="0" y1="135" x2="850" y2="135" />
+  <!-- Corner Tech Hatch Accents -->
+  <polygon points="814,6 842,6 842,34" fill="url(#hatch-pattern)"/>
+  <polygon points="6,186 6,214 34,214" fill="url(#hatch-pattern)"/>
+
+  <!-- Inner Tech Framing (Sub-border with dashed tech style) -->
+  <path d="M 22 8 L 828 8 L 842 22 L 842 198 L 828 212 L 22 212 L 8 198 L 8 22 Z" fill="none" stroke="#1e3a8a" stroke-width="0.75" stroke-dasharray="8 6" opacity="0.6"/>
+
+  <!-- Shimmering Laser Top Beam -->
+  <line x1="16" y1="2" x2="834" y2="2" stroke="url(#shimmer-laser)" stroke-width="2.5"/>
+
+  <!-- ==================== TOP SYSTEM BAR / HUD TELEMETRY ==================== -->
+  <!-- Window Control Traffic Lights -->
+  <circle cx="26" cy="22" r="4.5" fill="#f43f5e"/>
+  <circle cx="40" cy="22" r="4.5" fill="#fbbf24"/>
+  <circle cx="54" cy="22" r="4.5" fill="#10b981"/>
+
+  <!-- Terminal Session Pill -->
+  <g transform="translate(70, 11)">
+    <rect x="0" y="0" width="220" height="22" rx="4" fill="#071026" stroke="#1e3a8a" stroke-width="1"/>
+    <text x="12" y="15" class="mono" font-size="10.5px" font-weight="600" fill="#38bdf8">&gt;_ bash ~ muhammad-krisna.ts</text>
+    <rect x="180" y="3" width="34" height="16" rx="3" fill="#1e3a8a"/>
+    <text x="197" y="14.5" class="mono" font-size="8.5px" font-weight="700" fill="#93c5fd" text-anchor="middle">v2.4</text>
   </g>
 
-  <!-- Animated Top Border Shimmer Beam -->
-  <rect x="16" y="2" width="818" height="2" fill="url(#shimmer)"/>
-
-  <!-- Window Control Dots (Terminal Mac Aesthetic) -->
-  <circle cx="36" cy="26" r="4.5" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-  <circle cx="50" cy="26" r="4.5" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-  <circle cx="64" cy="26" r="4.5" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-
-  <!-- Code / Terminal Tag Pill -->
-  <g transform="translate(40, 62)">
-    <rect x="0" y="-14" width="185" height="24" rx="5" fill="#0b1329" stroke="#1e3a8a" stroke-width="1" />
-    <text x="12" y="2" class="mono-tag">// software_engineer.ts</text>
+  <!-- Center Telemetry Graduation Ruler -->
+  <g transform="translate(310, 14)">
+    <line x1="0" y1="0" x2="220" y2="0" stroke="#1e3a8a" stroke-width="1"/>
+    <!-- Tick Hashes -->
+    <line x1="0" y1="0" x2="0" y2="5" stroke="#38bdf8" stroke-width="1"/>
+    <line x1="22" y1="0" x2="22" y2="3" stroke="#38bdf8" stroke-width="0.8" opacity="0.7"/>
+    <line x1="44" y1="0" x2="44" y2="3" stroke="#38bdf8" stroke-width="0.8" opacity="0.7"/>
+    <line x1="66" y1="0" x2="66" y2="3" stroke="#38bdf8" stroke-width="0.8" opacity="0.7"/>
+    <line x1="88" y1="0" x2="88" y2="3" stroke="#38bdf8" stroke-width="0.8" opacity="0.7"/>
+    <line x1="110" y1="0" x2="110" y2="6" stroke="#38bdf8" stroke-width="1.2"/>
+    <line x1="132" y1="0" x2="132" y2="3" stroke="#38bdf8" stroke-width="0.8" opacity="0.7"/>
+    <line x1="154" y1="0" x2="154" y2="3" stroke="#38bdf8" stroke-width="0.8" opacity="0.7"/>
+    <line x1="176" y1="0" x2="176" y2="3" stroke="#38bdf8" stroke-width="0.8" opacity="0.7"/>
+    <line x1="198" y1="0" x2="198" y2="3" stroke="#38bdf8" stroke-width="0.8" opacity="0.7"/>
+    <line x1="220" y1="0" x2="220" y2="5" stroke="#38bdf8" stroke-width="1"/>
+    <text x="110" y="15" class="mono" font-size="8.5px" fill="#64748b" text-anchor="middle">CORE: 4.80 GHz // BUS: 64-BIT // BUFFER: 100%</text>
   </g>
 
-  <!-- Status Card (Positioned Top Right using pure SVG native transform) -->
-  <g transform="translate(630, 20)">
-    <g>
-      <animateTransform
-        attributeName="transform"
-        type="translate"
-        values="0,0; 0,-3; 0,0"
-        dur="4s"
-        repeatCount="indefinite"
-      />
-      <rect x="0" y="0" width="180" height="42" rx="8" fill="#0b1329" stroke="#1e3a8a" stroke-width="1"/>
-      <!-- Pulsing Dot -->
-      <circle cx="20" cy="21" r="5" fill="#38bdf8" opacity="0.3" class="status-ping"/>
-      <circle cx="20" cy="21" r="3.5" fill="#38bdf8"/>
-      <!-- Status Text -->
-      <text x="34" y="19" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11px" font-weight="600" fill="#f8fafc">Status</text>
-      <text x="34" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5px" font-weight="400" fill="#93c5fd">Open to Collaborate</text>
-    </g>
+  <!-- Top Right Telemetry Badges -->
+  <g transform="translate(565, 11)">
+    <rect x="0" y="0" width="138" height="22" rx="4" fill="#071026" stroke="#1e3a8a" stroke-width="1"/>
+    <circle cx="12" cy="11" r="3.5" fill="#10b981"/>
+    <text x="22" y="14.5" class="mono" font-size="9px" font-weight="600" fill="#38bdf8">SYS.STATUS: NOMINAL</text>
+  </g>
+
+  <g transform="translate(712, 11)">
+    <rect x="0" y="0" width="80" height="22" rx="4" fill="#071026" stroke="#1e3a8a" stroke-width="1"/>
+    <text x="40" y="14.5" class="mono" font-size="9px" font-weight="600" fill="#93c5fd" text-anchor="middle">LAT: 12ms</text>
+  </g>
+
+  <text x="806" y="25" class="mono" font-size="9px" font-weight="700" fill="#475569">[0x4F]</text>
+
+  <!-- ==================== LEFT HERO / DEVELOPER IDENTITY ==================== -->
+  <!-- Block Header -->
+  <g transform="translate(32, 58)">
+    <text x="0" y="0" class="mono" font-size="11.5px" font-weight="600" fill="#38bdf8" letter-spacing="1.2px">// DEVELOPER_IDENTITY_BLOCK</text>
+    <line x1="225" y1="-4" x2="360" y2="-4" stroke="#1e3a8a" stroke-width="1" stroke-dasharray="4 4"/>
   </g>
 
   <!-- Main Name Header -->
-  <g transform="translate(40, 114)">
-    <text x="0" y="0" class="title">Muhammad Krisna<tspan fill="#38bdf8">.</tspan></text>
+  <g transform="translate(30, 104)">
+    <text x="0" y="0" class="sans" font-size="40px" font-weight="900" fill="url(#name-grad)" letter-spacing="-0.5px">MUHAMMAD KRISNA<tspan fill="#38bdf8">.</tspan></text>
   </g>
 
-  <!-- Subtitle: Software Engineer only -->
-  <g transform="translate(40, 146)">
-    <text x="0" y="0" class="subtitle">Software Engineer <tspan class="cursor" fill="#38bdf8">_</tspan></text>
+  <!-- Subtitle: Software Engineer with animated cursor -->
+  <g transform="translate(32, 136)">
+    <text x="0" y="0" class="mono" font-size="17px" font-weight="600" fill="#93c5fd">&gt; Software Engineer <tspan class="cursor" fill="#38bdf8">_</tspan></text>
   </g>
 
-  <!-- Decorative Corner Brackets -->
-  <g stroke="#38bdf8" stroke-width="1.5" opacity="0.35" fill="none">
-    <path d="M 820 135 L 826 135 L 826 145" />
-    <path d="M 826 155 L 826 165 L 816 165" />
+  <!-- High-Tech Capability Chips -->
+  <g transform="translate(32, 154)">
+    <!-- Chip 1 -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="145" height="22" rx="4" fill="url(#chip-bg)" stroke="#1e3a8a" stroke-width="1"/>
+      <circle cx="10" cy="11" r="2.5" fill="#38bdf8"/>
+      <text x="18" y="14.5" class="mono" font-size="9.5px" font-weight="600" fill="#e0f2fe">DISTRIBUTED SYSTEMS</text>
+    </g>
+
+    <!-- Chip 2 -->
+    <g transform="translate(153, 0)">
+      <rect x="0" y="0" width="112" height="22" rx="4" fill="url(#chip-bg)" stroke="#1e3a8a" stroke-width="1"/>
+      <circle cx="10" cy="11" r="2.5" fill="#60a5fa"/>
+      <text x="18" y="14.5" class="mono" font-size="9.5px" font-weight="600" fill="#e0f2fe">CLOUD NATIVE</text>
+    </g>
+
+    <!-- Chip 3 -->
+    <g transform="translate(273, 0)">
+      <rect x="0" y="0" width="128" height="22" rx="4" fill="url(#chip-bg)" stroke="#1e3a8a" stroke-width="1"/>
+      <circle cx="10" cy="11" r="2.5" fill="#818cf8"/>
+      <text x="18" y="14.5" class="mono" font-size="9.5px" font-weight="600" fill="#e0f2fe">HIGH PERFORMANCE</text>
+    </g>
+  </g>
+
+  <!-- Bottom Left Metadata Decal -->
+  <g transform="translate(32, 202)">
+    <path d="M -8 -8 L -8 2 L 2 2" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="10" y="0" class="mono" font-size="8.5px" fill="#475569">SYS.KERNEL: LINUX_x86_64 // ID: #0018 // SECURITY: VERIFIED</text>
+  </g>
+
+  <!-- ==================== RIGHT MODULE 1: STATUS BADGE ==================== -->
+  <g transform="translate(615, 45)">
+    <rect x="0" y="0" width="210" height="28" rx="6" fill="#071026" stroke="#1e3a8a" stroke-width="1.2"/>
+    <!-- Pulsing Radar Ping Beacon -->
+    <circle cx="16" cy="14" r="4.5" fill="#38bdf8">
+      <animate attributeName="opacity" values="1;0.4;1" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="16" cy="14" r="8" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.6">
+      <animate attributeName="r" values="4.5;12" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Status Text -->
+    <text x="30" y="18" class="mono" font-size="10.5px" font-weight="700" fill="#f8fafc">STATUS: <tspan fill="#38bdf8">OPEN TO COLLAB</tspan></text>
+  </g>
+
+  <!-- ==================== RIGHT MODULE 2: LIVE SPECTRUM ANALYZER ==================== -->
+  <!-- 14 Dynamic Animated Equalizer Bars -->
+  <g transform="translate(470, 160)">
+    <text x="50" y="18" class="mono" font-size="8px" fill="#475569" text-anchor="middle">SPECTRUM // 48.2 kHz</text>
+    <line x1="0" y1="0" x2="105" y2="0" stroke="#1e3a8a" stroke-width="1"/>
+
+    <!-- Bar 1 -->
+    <rect x="3" width="5" rx="2" fill="url(#eq-grad)" y="-16" height="16">
+      <animate attributeName="height" values="8;24;12;28;10;8" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="-8;-24;-12;-28;-10;-8" dur="1.5s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bar 2 -->
+    <rect x="10" width="5" rx="2" fill="url(#eq-grad)" y="-28" height="28">
+      <animate attributeName="height" values="14;34;18;40;16;14" dur="2.1s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="-14;-34;-18;-40;-16;-14" dur="2.1s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bar 3 -->
+    <rect x="17" width="5" rx="2" fill="url(#eq-grad)" y="-20" height="20">
+      <animate attributeName="height" values="10;26;32;14;22;10" dur="1.7s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="-10;-26;-32;-14;-22;-10" dur="1.7s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bar 4 -->
+    <rect x="24" width="5" rx="2" fill="url(#eq-grad)" y="-36" height="36">
+      <animate attributeName="height" values="20;46;28;52;30;20" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="-20;-46;-28;-52;-30;-20" dur="2.4s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bar 5 -->
+    <rect x="31" width="5" rx="2" fill="url(#eq-grad)" y="-14" height="14">
+      <animate attributeName="height" values="8;20;14;26;12;8" dur="1.3s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="-8;-20;-14;-26;-12;-8" dur="1.3s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bar 6 -->
+    <rect x="38" width="5" rx="2" fill="url(#eq-grad)" y="-42" height="42">
+      <animate attributeName="height" values="24;54;32;48;38;24" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="-24;-54;-32;-48;-38;-24" dur="2.8s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bar 7 -->
+    <rect x="45" width="5" rx="2" fill="url(#eq-grad)" y="-24" height="24">
+      <animate attributeName="height" values="12;32;18;38;20;12" dur="1.9s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="-12;-32;-18;-38;-20;-12" dur="1.9s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bar 8 -->
+    <rect x="52" width="5" rx="2" fill="url(#eq-grad)" y="-32" height="32">
+      <animate attributeName="height" values="18;42;24;46;26;18" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="-18;-42;-24;-46;-26;-18" dur="2.2s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bar 9 -->
+    <rect x="59" width="5" rx="2" fill="url(#eq-grad)" y="-18" height="18">
+      <animate attributeName="height" values="10;24;16;30;12;10" dur="1.6s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="-10;-24;-16;-30;-12;-10" dur="1.6s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bar 10 -->
+    <rect x="66" width="5" rx="2" fill="url(#eq-grad)" y="-38" height="38">
+      <animate attributeName="height" values="22;48;30;50;28;22" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="-22;-48;-30;-50;-28;-22" dur="2.5s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bar 11 -->
+    <rect x="73" width="5" rx="2" fill="url(#eq-grad)" y="-16" height="16">
+      <animate attributeName="height" values="8;22;14;28;12;8" dur="1.4s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="-8;-22;-14;-28;-12;-8" dur="1.4s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bar 12 -->
+    <rect x="80" width="5" rx="2" fill="url(#eq-grad)" y="-28" height="28">
+      <animate attributeName="height" values="16;36;22;42;24;16" dur="2.0s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="-16;-36;-22;-42;-24;-16" dur="2.0s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bar 13 -->
+    <rect x="87" width="5" rx="2" fill="url(#eq-grad)" y="-20" height="20">
+      <animate attributeName="height" values="12;28;16;32;18;12" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="-12;-28;-16;-32;-18;-12" dur="1.8s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bar 14 -->
+    <rect x="94" width="5" rx="2" fill="url(#eq-grad)" y="-12" height="12">
+      <animate attributeName="height" values="6;18;10;22;8;6" dur="1.3s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="-6;-18;-10;-22;-8;-6" dur="1.3s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ==================== RIGHT MODULE 3: HOLOGRAPHIC GYROSCOPE REACTOR ==================== -->
+  <g transform="translate(735, 142)">
+    <!-- Expanding Concentric Radar Wave -->
+    <circle cx="0" cy="0" r="12" fill="none" stroke="#38bdf8" stroke-width="1.2">
+      <animate attributeName="r" values="12;62" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.85;0" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="12" fill="none" stroke="#2563eb" stroke-width="1">
+      <animate attributeName="r" values="6;46" dur="2.8s" begin="1.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.75;0" dur="2.8s" begin="1.4s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Ring 1: Outer Clockwise Dashed Ring -->
+    <circle cx="0" cy="0" r="48" fill="none" stroke="#1e3a8a" stroke-width="1.5" stroke-dasharray="14 10">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="16s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Ring 2: Counter-Clockwise Tick Mark Ring -->
+    <circle cx="0" cy="0" r="38" fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="3 7">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="10s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Ring 3: Hexagonal Tech Frame -->
+    <polygon points="0,-26 22.5,-13 22.5,13 0,26 -22.5,13 -22.5,-13" fill="none" stroke="#60a5fa" stroke-width="1.2" opacity="0.8">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/>
+    </polygon>
+
+    <!-- Orbiting Satellite Particles -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/>
+      <circle cx="0" cy="-38" r="3" fill="#ffffff"/>
+      <circle cx="0" cy="38" r="2.5" fill="#38bdf8"/>
+      <circle cx="-38" cy="0" r="2" fill="#818cf8"/>
+    </g>
+
+    <!-- Central Reactor Core -->
+    <circle cx="0" cy="0" r="11" fill="#071026" stroke="#38bdf8" stroke-width="2"/>
+    <circle cx="0" cy="0" r="5" fill="#ffffff">
+      <animate attributeName="r" values="4;6.5;4" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- HUD Targeting Crosshairs -->
+    <line x1="-58" y1="0" x2="-50" y2="0" stroke="#38bdf8" stroke-width="1.5"/>
+    <line x1="50" y1="0" x2="58" y2="0" stroke="#38bdf8" stroke-width="1.5"/>
+    <line x1="0" y1="-58" x2="0" y2="-50" stroke="#38bdf8" stroke-width="1.5"/>
+    <line x1="0" y1="50" x2="0" y2="58" stroke="#38bdf8" stroke-width="1.5"/>
+
+    <!-- Target Calibration Coordinates -->
+    <text x="0" y="65" class="mono" font-size="7.5px" fill="#38bdf8" text-anchor="middle">TARGET: ORBITAL_CORE // LOCKED</text>
+  </g>
+
+  <!-- Decorative Corner Brackets Bottom Right -->
+  <g stroke="#38bdf8" stroke-width="1.5" opacity="0.8" fill="none">
+    <path d="M 834 196 L 834 206 L 824 206" />
   </g>
 </svg>

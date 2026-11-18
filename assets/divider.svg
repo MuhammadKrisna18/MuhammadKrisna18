@@ -1,33 +1,99 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 24" width="100%" height="24" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 32" width="100%" height="32" fill="none">
   <defs>
-    <!-- Divider Gradient -->
-    <linearGradient id="div-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Main Beam Gradient -->
+    <linearGradient id="div-core-grad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
-      <stop offset="25%" stop-color="#1e3a8a" stop-opacity="0.4"/>
-      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.9"/>
-      <stop offset="75%" stop-color="#1e3a8a" stop-opacity="0.4"/>
+      <stop offset="20%" stop-color="#1e3a8a" stop-opacity="0.4"/>
+      <stop offset="45%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="80%" stop-color="#1e3a8a" stop-opacity="0.4"/>
       <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- Pulse for Center Node -->
+    <!-- Stepped Trace Gradient -->
+    <linearGradient id="div-trace-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#2563eb" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="65%" stop-color="#2563eb" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </linearGradient>
+
     <style>
-      @keyframes pulseNode {
-        0%, 100% { transform: scale(1); opacity: 0.8; }
-        50% { transform: scale(1.3); opacity: 1; }
-      }
-      .node-pulse {
-        transform-origin: 425px 12px;
-        animation: pulseNode 3s ease-in-out infinite;
+      .mono {
+        font-family: ui-monospace, SFMono-Regular, 'JetBrains Mono', Menlo, Consolas, monospace;
       }
     </style>
   </defs>
 
-  <!-- Glowing Line -->
-  <line x1="40" y1="12" x2="810" y2="12" stroke="url(#div-grad)" stroke-width="1.5"/>
+  <!-- ==================== BACKGROUND STEPPED CIRCUIT TRACES ==================== -->
+  <!-- Upper Stepped Circuit Trace -->
+  <path d="M 60 10 L 375 10 L 390 16 L 410 16" fill="none" stroke="url(#div-trace-grad)" stroke-width="1"/>
+  <path d="M 790 10 L 475 10 L 460 16 L 440 16" fill="none" stroke="url(#div-trace-grad)" stroke-width="1"/>
 
-  <!-- Center Glowing Diamond -->
-  <g class="node-pulse">
-    <rect x="420" y="7" width="10" height="10" rx="2" transform="rotate(45 425 12)" fill="#0b1329" stroke="#38bdf8" stroke-width="1.5"/>
-    <circle cx="425" cy="12" r="2" fill="#ffffff"/>
+  <!-- Lower Stepped Circuit Trace -->
+  <path d="M 60 22 L 375 22 L 390 16 L 410 16" fill="none" stroke="url(#div-trace-grad)" stroke-width="1"/>
+  <path d="M 790 22 L 475 22 L 460 16 L 440 16" fill="none" stroke="url(#div-trace-grad)" stroke-width="1"/>
+
+  <!-- ==================== MAIN GLOWING LASER BEAM ==================== -->
+  <line x1="40" y1="16" x2="810" y2="16" stroke="url(#div-core-grad)" stroke-width="1.8"/>
+
+  <!-- Graduation Millimeter Hashes -->
+  <g stroke="#38bdf8" stroke-width="0.8" opacity="0.5">
+    <line x1="200" y1="14" x2="200" y2="18"/>
+    <line x1="250" y1="14" x2="250" y2="18"/>
+    <line x1="300" y1="14" x2="300" y2="18"/>
+    <line x1="350" y1="14" x2="350" y2="18"/>
+    <line x1="500" y1="14" x2="500" y2="18"/>
+    <line x1="550" y1="14" x2="550" y2="18"/>
+    <line x1="600" y1="14" x2="600" y2="18"/>
+    <line x1="650" y1="14" x2="650" y2="18"/>
+  </g>
+
+  <!-- Inward Traveling Energy Pulses (Left -> Center & Right -> Center) -->
+  <circle r="3" fill="#ffffff">
+    <animate attributeName="cx" values="40; 425" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="cy" values="16; 16" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 1; 0" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle r="3" fill="#ffffff">
+    <animate attributeName="cx" values="810; 425" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="cy" values="16; 16" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0; 1; 0" dur="2s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- ==================== TERMINAL END CAP NODES ==================== -->
+  <circle cx="45" cy="16" r="3" fill="#071026" stroke="#38bdf8" stroke-width="1.2"/>
+  <circle cx="45" cy="16" r="1.5" fill="#38bdf8"/>
+
+  <circle cx="805" cy="16" r="3" fill="#071026" stroke="#38bdf8" stroke-width="1.2"/>
+  <circle cx="805" cy="16" r="1.5" fill="#38bdf8"/>
+
+  <!-- ==================== CENTER SCI-FI CORE RETICLE ==================== -->
+  <g transform="translate(425, 16)">
+    <!-- Expanding Pulse Wave -->
+    <circle cx="0" cy="0" r="6" fill="none" stroke="#38bdf8" stroke-width="1.2">
+      <animate attributeName="r" values="6; 22" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.85; 0" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Outer Rotating Dashed Ring -->
+    <circle cx="0" cy="0" r="13" fill="none" stroke="#1e3a8a" stroke-width="1.2" stroke-dasharray="4 4">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Diamond Core Outer Shell -->
+    <rect x="-6" y="-6" width="12" height="12" rx="2" transform="rotate(45)" fill="#071026" stroke="#38bdf8" stroke-width="1.5"/>
+
+    <!-- Inner Core Glowing Gem -->
+    <circle cx="0" cy="0" r="2.5" fill="#ffffff">
+      <animate attributeName="r" values="2; 3.2; 2" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8; 1; 0.8" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Flanking Chevron Direction Indicators -->
+    <text x="-26" y="3.5" class="mono" font-size="9px" font-weight="700" fill="#38bdf8" text-anchor="middle" opacity="0.7">&lt;&lt;&lt;</text>
+    <text x="26" y="3.5" class="mono" font-size="9px" font-weight="700" fill="#38bdf8" text-anchor="middle" opacity="0.7">&gt;&gt;&gt;</text>
   </g>
 </svg>
